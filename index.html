@@ -1496,6 +1496,54 @@
       .stack-card { position: static; width: 100%; }
       .final-cta .panel { padding: 38px 22px; }
     }
+
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      text-align: left;
+    }
+
+    .footer-col strong {
+      display: block;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 6px;
+    }
+
+    .footer-col p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .footer-tagline {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1516,7 +1564,7 @@
         <nav class="published-nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link" href="#about-us">About Us</a>
+              <a class="nav-link" href="#why-royal">About Us</a>
             </li>
 
             <li class="nav-item">
@@ -1526,21 +1574,21 @@
                 <a href="#services">Mobile Wound Care <span>›</span></a>
                 <a href="#services">In-Clinic Wound Care <span>›</span></a>
                 <a href="#services">Home Health Care <span>›</span></a>
-                <a href="#partner">SNF Partners <span>›</span></a>
+                <a href="#why-royal">SNF Partners <span>›</span></a>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#partner">Become a Partner <span class="chev">▼</span></a>
+              <a class="nav-link" href="#why-royal">Become a Partner <span class="chev">▼</span></a>
               <div class="dropdown">
-                <a href="#partner">What Our Partners Experience <span>›</span></a>
+                <a href="#why-royal">What Our Partners Experience <span>›</span></a>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#what-sets-us-apart">Wound Care <span class="chev">▼</span></a>
+              <a class="nav-link" href="#why-royal">Wound Care <span class="chev">▼</span></a>
               <div class="dropdown dropdown--wide">
-                <a href="#timely-wound-care">Why wound care <span>›</span></a>
+                <a href="#why-royal">Why wound care <span>›</span></a>
                 <a href="#services">Advanced Wound Treatments <span>›</span></a>
                 <a href="#resources">Diabetes and Wound Care <span>›</span></a>
                 <a href="#resources">Heart Disease &amp; Wound Care <span>›</span></a>
@@ -1556,7 +1604,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#resources">Resources <span class="chev">▼</span></a>
               <div class="dropdown">
-                <a href="#about-us">Board-Certified Wound Care <span>›</span></a>
+                <a href="#why-royal">Board-Certified Wound Care <span>›</span></a>
                 <a href="#resources">Blog <span>›</span></a>
                 <a href="#contact">Contact Us <span>›</span></a>
                 <a href="#resources">Frequently Asked Questions <span>›</span></a>
@@ -1706,14 +1754,14 @@
               <div class="mini-icon">☘</div>
               <h3>Families</h3>
               <p>Access practical wound care guidance for families supporting a loved one and preparing for the next care step.</p>
-              <a class="text-link" href="#caring">View family resources →</a>
+              <a class="text-link" href="#resources">View family resources →</a>
             </article>
 
             <article class="audience-card" id="facilities">
               <div class="mini-icon">▦</div>
               <h3>Facilities</h3>
               <p>Learn how Royal Wound Care can support skilled nursing facilities, bedside wound care coordination, and facility care teams.</p>
-              <a class="text-link" href="#partner">Become a partner →</a>
+              <a class="text-link" href="#why-royal">Become a partner →</a>
             </article>
 
             <article class="audience-card" id="education">
@@ -1726,61 +1774,38 @@
         </div>
       </section>
 
-      <section class="section about-royal" id="about-us">
-        <div class="section-inner about-grid">
-          <div class="section-heading" style="margin-bottom: 0;">
-            <div class="label">Who We Are</div>
-            <h2>Advanced wound care with a clearer path forward.</h2>
-            <p>Royal Wound Care supports patients, families, skilled nursing facilities, and healthcare teams with advanced wound care services across mobile, in-clinic, home health, and facility-based settings.</p>
-          </div>
-
-          <div class="about-card">
-            <h3>Wound care designed around coordination, clarity, and clinical support.</h3>
-            <p>Royal Wound Care provides a structured approach focused on advanced wound care, patient support, facility collaboration, and professional education.</p>
-          </div>
-
-          <div class="about-points">
-            <div class="about-point">
-              <strong>For patients and families</strong>
-              <span>Clear pathways for appointment options, mobile wound care, in-clinic wound care, and general wound care guidance.</span>
-            </div>
-            <div class="about-point">
-              <strong>For skilled nursing facilities</strong>
-              <span>Support-oriented messaging for skilled nursing facility teams, staff training, bedside wound care, and partnership needs.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="what-sets-us-apart">
+      <section class="section about-royal" id="why-royal">
         <div class="section-inner">
           <div class="section-heading">
-            <div class="label">What Sets Us Apart</div>
-            <h2>A more coordinated advanced wound care experience.</h2>
-            <p>Royal Wound Care helps visitors identify the right care setting, understand available support options, and connect with information for patient, family, and facility needs.</p>
+            <div class="label">Why Royal Wound Care</div>
+            <h2>Advanced wound care built around coordination, clarity, and clinical support.</h2>
+            <p>Royal Wound Care supports patients, families, skilled nursing facilities, and healthcare teams with advanced wound care services across mobile, in-clinic, home health, and facility-based settings — keeping communication clear and care pathways organized for every audience.</p>
           </div>
 
-          <div class="service-grid">
-            <article class="service-card">
-              <div class="mini-icon">✚</div>
-              <h3>Specialized focus</h3>
-              <p>A focused wound care service line supports patients, families, skilled nursing facilities, and clinical teams with clearer care pathways.</p>
-            </article>
-            <article class="service-card">
-              <div class="mini-icon">▦</div>
-              <h3>Facility-ready support</h3>
-              <p>Clear pathways for bedside wound care, staff education, compliance-aware support, and skilled nursing facility partnerships.</p>
-            </article>
-            <article class="service-card">
-              <div class="mini-icon">♡</div>
-              <h3>Patient-centered guidance</h3>
-              <p>Patients and families can quickly understand wound care options, care settings, and appropriate next steps.</p>
-            </article>
-            <article class="service-card">
-              <div class="mini-icon">▱</div>
-              <h3>Education connection</h3>
-              <p>Professional wound care education, Wound Care Course information, and care team resources are easy to access.</p>
-            </article>
+          <div class="about-grid">
+            <div class="about-card">
+              <h3>A more coordinated wound care experience for patients, families, and facility teams.</h3>
+              <p>Clear pathways, compliance-aware facility support, and timely access to wound care information help patients and care teams identify the right next step.</p>
+            </div>
+
+            <div class="about-points">
+              <div class="about-point">
+                <strong>Specialized wound care focus</strong>
+                <span>A focused service line with clear pathways for patients, families, skilled nursing facilities, and clinical teams.</span>
+              </div>
+              <div class="about-point">
+                <strong>Facility-ready and compliance-aware</strong>
+                <span>Bedside wound care coordination, staff training, documentation awareness, and facility communication without overpromising outcomes.</span>
+              </div>
+              <div class="about-point">
+                <strong>Patient-centered guidance</strong>
+                <span>Clear appointment options, mobile wound care, in-clinic wound care, and wound care guidance to help patients and families find the right next step.</span>
+              </div>
+              <div class="about-point">
+                <strong>Education and professional development</strong>
+                <span>Wound Care Course information, in-service training, and education resources for facilities and healthcare professionals.</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1818,34 +1843,6 @@
         </div>
       </section>
 
-      <section class="section partner-section" id="partner">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div class="label">For Facilities</div>
-            <h2>Why partner with Royal Wound Care?</h2>
-            <p>Royal Wound Care works with skilled nursing facilities, care teams, and healthcare partners seeking advanced wound care support, bedside coordination, staff education, and clear communication pathways.</p>
-          </div>
-
-          <div class="partner-benefits-grid">
-            <article class="partner-benefit-card">
-              <div class="mini-icon">▦</div>
-              <h3>Facility-focused support</h3>
-              <p>Support for skilled nursing facilities, bedside wound care coordination, staff communication, and care team collaboration.</p>
-            </article>
-            <article class="partner-benefit-card">
-              <div class="mini-icon">✓</div>
-              <h3>Compliance-aware approach</h3>
-              <p>Support for documentation awareness, staff training, and compliance-conscious facility communication without overpromising outcomes.</p>
-            </article>
-            <article class="partner-benefit-card">
-              <div class="mini-icon">✚</div>
-              <h3>Clinical education pathway</h3>
-              <p>Facility partners can access in-service training, professional wound care education, and wound care course information.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="partners">
         <div class="section-inner">
           <div class="section-heading">
@@ -1878,7 +1875,7 @@
                 <h3>Caring for Your Wound</h3>
                 <p>A clear entry point for general wound care guidance and topics to discuss with a care professional.</p>
               </div>
-              <a class="text-link" href="#caring">Read guide →</a>
+              <a class="text-link" href="#resources">Read guide →</a>
             </article>
             <article class="resource-card">
               <div>
@@ -1895,46 +1892,6 @@
                 <p>A wound care education pathway for professionals looking for training, course, or continuing education options.</p>
               </div>
               <a class="text-link" href="#wound-care-course">Explore course →</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="timely-wound-care">
-        <div class="section-inner split">
-          <div class="section-heading" style="margin-bottom: 0;">
-            <div class="label">Why Timely Wound Care Matters</div>
-            <h2>Clear wound care support can help patients and teams seek guidance sooner.</h2>
-            <p>Timely wound care support can help patients, families, and care teams better understand care needs, available care settings, and when advanced wound care guidance may be appropriate.</p>
-          </div>
-
-          <div class="premium-panel">
-            <div class="check-list" style="margin-top: 0;">
-              <div class="check-item"><span>✓</span> Helps visitors understand available wound care pathways.</div>
-              <div class="check-item"><span>✓</span> Supports family and skilled nursing facility decision-making with clearer information.</div>
-              <div class="check-item"><span>✓</span> Keeps educational language safe, general, and non-promissory.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="locations">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div class="label">Locations</div>
-            <h2>Wound care access points.</h2>
-            <p>Contact Royal Wound Care for current location details, appointment availability, and care setting information.</p>
-          </div>
-          <div class="locations-grid">
-            <article class="location-card">
-              <small>Location</small>
-              <h3>West Hills</h3>
-              <p>Contact Royal Wound Care for current address, phone, and appointment details for this location.</p>
-            </article>
-            <article class="location-card">
-              <small>Location</small>
-              <h3>Beverly Hills</h3>
-              <p>Contact Royal Wound Care for current address, phone, and appointment details for this location.</p>
             </article>
           </div>
         </div>
@@ -1972,7 +1929,7 @@
           <p>Contact Royal Wound Care to request an appointment, learn about facility support, or ask which wound care setting may fit your needs.</p>
           <div class="hero-cta" style="justify-content: center; opacity: 1; animation: none;">
             <a class="btn btn-primary" href="#contact">Request Appointment</a>
-            <a class="btn btn-teal" href="#partner">Partner With Us</a>
+            <a class="btn btn-teal" href="#why-royal">Partner With Us</a>
           </div>
         </div>
       </section>
@@ -2075,7 +2032,22 @@
     </div>
 
     <footer id="contact">
-      Royal Wound Care · Specialized wound care, facility support, education, and resources
+      <div class="footer-inner">
+        <div class="footer-col">
+          <strong>Service Areas</strong>
+          <ul>
+            <li>West Hills</li>
+            <li>Beverly Hills</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <strong>Contact</strong>
+          <p>Contact Royal Wound Care for current appointment and location information.</p>
+        </div>
+      </div>
+      <div class="footer-tagline">
+        Royal Wound Care · Specialized wound care, facility support, education, and resources
+      </div>
     </footer>
   </div>
   <script>
