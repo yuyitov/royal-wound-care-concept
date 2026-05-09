@@ -861,7 +861,7 @@
 
     .partners-logo-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
 
@@ -871,12 +871,27 @@
       border: 1px solid var(--line);
       background: var(--white);
       box-shadow: 0 14px 40px rgba(31,59,104,.06);
-      display: grid;
-      place-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 18px;
-      color: var(--muted);
-      font-weight: 800;
+      padding: 24px 20px;
+      gap: 10px;
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+
+    .partner-logo-card:hover {
+      box-shadow: 0 20px 56px rgba(31,59,104,.13);
+      transform: translateY(-2px);
+    }
+
+    .partner-logo-card img {
+      max-width: 100%;
+      max-height: 66px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
     }
 
     .partner-logo-card span {
@@ -2052,10 +2067,30 @@
           </div>
 
           <div class="partners-logo-grid">
-            <div class="partner-logo-card"><span>Skilled Nursing Facilities</span></div>
-            <div class="partner-logo-card"><span>Home Health Teams</span></div>
-            <div class="partner-logo-card"><span>Case Management Teams</span></div>
-            <div class="partner-logo-card"><span>Healthcare Partners</span></div>
+            <div class="partner-logo-card">
+              <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/FtBJCK1GLpMIqS57PbDJ/media/67e6f01d13c4b647cd0fd0bb.png" alt="Active Plus Home Health logo">
+              <span>Active Plus Home Health</span>
+            </div>
+            <div class="partner-logo-card">
+              <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/FtBJCK1GLpMIqS57PbDJ/media/67e6f01799a78ccd07a17f94.png" alt="Ameri Hospice Care logo">
+              <span>Ameri Hospice Care</span>
+            </div>
+            <div class="partner-logo-card">
+              <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/FtBJCK1GLpMIqS57PbDJ/media/67e6f014b60b7756e75ba0a4.jpeg" alt="Chatsworth Park Health Care Center logo">
+              <span>Chatsworth Park Health Care Center</span>
+            </div>
+            <div class="partner-logo-card">
+              <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/FtBJCK1GLpMIqS57PbDJ/media/67e6f010f523c7da221685a5.png" alt="VITAS Palliative Care logo">
+              <span>VITAS Palliative Care</span>
+            </div>
+            <div class="partner-logo-card">
+              <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/FtBJCK1GLpMIqS57PbDJ/media/67e6f00d379294e789e44c61.png" alt="Tri-Valley Hospice Care logo">
+              <span>Tri-Valley Hospice Care</span>
+            </div>
+            <div class="partner-logo-card">
+              <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/FtBJCK1GLpMIqS57PbDJ/media/67e6f008c5f22a26c4aad7b5.png" alt="Option One Home Care Inc. logo">
+              <span>Option One Home Care Inc.</span>
+            </div>
           </div>
         </div>
       </section>
