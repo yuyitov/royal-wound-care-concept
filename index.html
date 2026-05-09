@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Royal Wound Care — Specialized Wound Care</title>
+  <title>Royal Wound Care â€” Specialized Wound Care</title>
   <meta name="description" content="Royal Wound Care provides specialized wound care information for patients, families, skilled nursing facilities, mobile wound care, in-clinic wound care, Wound VAC support, and wound care education." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -729,6 +729,211 @@
       line-height: 1.55;
     }
 
+    /* â”€â”€ Specialized Services â€“ dark carousel â”€â”€ */
+    .services-carousel {
+      background:
+        radial-gradient(ellipse at 75% 55%, rgba(44,166,164,.13) 0%, transparent 52%),
+        radial-gradient(ellipse at 10% 20%, rgba(242,197,124,.07) 0%, transparent 40%),
+        linear-gradient(148deg, #061728 0%, #0D2240 38%, #122d50 68%, #0A1C38 100%);
+      overflow: hidden;
+      padding: 88px 0 80px;
+    }
+
+    .services-carousel .section-inner {
+      padding-bottom: 0;
+    }
+
+    /* Two-col intro row */
+    .carousel-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 48px;
+      align-items: center;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 48px 36px;
+    }
+
+    .carousel-intro-left .c-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .carousel-intro-left .c-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .carousel-intro-left h2 {
+      font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+      font-size: clamp(26px, 2.8vw, 38px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      margin: 0;
+    }
+
+    .carousel-intro-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .carousel-intro-right p {
+      font-size: 16px;
+      color: rgba(255,255,255,.58);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .carousel-intro-right .c-stat-row {
+      display: flex;
+      gap: 28px;
+    }
+
+    .c-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .c-stat strong {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .c-stat span {
+      font-size: 13px;
+      color: rgba(255,255,255,.46);
+      letter-spacing: .04em;
+    }
+
+    /* Carousel */
+    .carousel-outer {
+      overflow: hidden;
+      width: 100%;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+      padding: 8px 0 12px;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 18px;
+      width: max-content;
+      animation: carouselScroll 65s linear infinite;
+      padding: 0 24px;
+    }
+
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes carouselScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .carousel-card {
+      flex: 0 0 310px;
+      min-height: 220px;
+      padding: 0;
+      border-radius: 18px;
+      background: linear-gradient(160deg, rgba(255,255,255,.13) 0%, rgba(255,255,255,.05) 100%);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 4px 28px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.28);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      transition: background .28s ease, border-color .28s ease, box-shadow .28s ease;
+    }
+
+    /* White light shimmer visible by default */
+    .carousel-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 55%;
+      background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.10) 0%, transparent 72%);
+      pointer-events: none;
+      border-radius: 18px 18px 0 0;
+    }
+
+    /* Teal top line — hidden by default, shows on hover */
+    .carousel-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal), var(--teal-light));
+      opacity: 0;
+      transition: opacity .28s ease;
+      z-index: 2;
+    }
+
+    .carousel-card:hover {
+      background: linear-gradient(160deg, rgba(44,166,164,.18) 0%, rgba(44,166,164,.07) 100%);
+      border-color: rgba(44,166,164,.40);
+      box-shadow: 0 8px 36px rgba(44,166,164,.20), inset 0 1px 0 rgba(255,255,255,.30);
+    }
+
+    .carousel-card:hover::before {
+      opacity: 1;
+    }
+
+    .carousel-card-inner {
+      padding: 26px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .carousel-card .c-num {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      color: var(--teal-light);
+      opacity: .8;
+    }
+
+    .carousel-card h3 {
+      font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--white);
+      margin: 0;
+      line-height: 1.28;
+    }
+
+    .carousel-card p {
+      font-size: 15px;
+      color: rgba(255,255,255,.88);
+      line-height: 1.6;
+      margin: 0;
+    }
+
     .education-section {
       background:
         radial-gradient(circle at 88% 12%, rgba(59,169,166,.13), transparent 26%),
@@ -784,7 +989,7 @@
     }
 
     .education-list div::before {
-      content: "✓";
+      content: "âœ“";
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -1175,7 +1380,7 @@
     }
 
     .drainage-list li::before {
-      content: "✓";
+      content: "âœ“";
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -1390,7 +1595,7 @@
       line-height: 1.5;
     }
 
-    .services-section {
+    .services-section:not(.services-carousel) {
       background: var(--soft);
     }
 
@@ -1598,6 +1803,7 @@
       .audience-grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid,
       .education-panel { grid-template-columns: 1fr; }
+      .carousel-intro { grid-template-columns: 1fr; gap: 20px; padding: 0 24px 40px; }
       .service-grid,
       .partner-benefits-grid,
       .partners-logo-grid,
@@ -1780,55 +1986,55 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#services">Our Services <span class="chev">▼</span></a>
+              <a class="nav-link" href="#services">Our Services <span class="chev">â–¼</span></a>
               <div class="dropdown">
-                <a href="skilled-nursing-facilities.html">Skilled Nursing Facilities <span>›</span></a>
-                <a href="#services">Mobile Wound Care <span>›</span></a>
-                <a href="#services">In-Clinic Wound Care <span>›</span></a>
-                <a href="#services">Home Health Care <span>›</span></a>
-                <a href="#why-royal">SNF Partners <span>›</span></a>
+                <a href="skilled-nursing-facilities.html">Skilled Nursing Facilities <span>â€º</span></a>
+                <a href="#services">Mobile Wound Care <span>â€º</span></a>
+                <a href="#services">In-Clinic Wound Care <span>â€º</span></a>
+                <a href="#services">Home Health Care <span>â€º</span></a>
+                <a href="#why-royal">SNF Partners <span>â€º</span></a>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#why-royal">Become a Partner <span class="chev">▼</span></a>
+              <a class="nav-link" href="#why-royal">Become a Partner <span class="chev">â–¼</span></a>
               <div class="dropdown">
-                <a href="#why-royal">What Our Partners Experience <span>›</span></a>
+                <a href="#why-royal">What Our Partners Experience <span>â€º</span></a>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#why-royal">Wound Care <span class="chev">▼</span></a>
+              <a class="nav-link" href="#why-royal">Wound Care <span class="chev">â–¼</span></a>
               <div class="dropdown dropdown--wide">
-                <a href="#why-royal">Why wound care <span>›</span></a>
-                <a href="#services">Advanced Wound Treatments <span>›</span></a>
-                <a href="#resources">Diabetes and Wound Care <span>›</span></a>
-                <a href="#resources">Heart Disease &amp; Wound Care <span>›</span></a>
-                <a href="#resources">Vascular Disease &amp; Wound Care <span>›</span></a>
-                <a href="#resources">Pressure Ulcers and Wound Care <span>›</span></a>
-                <a href="#resources">Cancer and Wound Care <span>›</span></a>
-                <a href="#resources">Caring for Your Wound <span>›</span></a>
-                <a href="#resources">Surgical Incisions, Infections <span>›</span></a>
-                <a href="#resources">Chronic Wounds <span>›</span></a>
+                <a href="#why-royal">Why wound care <span>â€º</span></a>
+                <a href="#services">Advanced Wound Treatments <span>â€º</span></a>
+                <a href="#resources">Diabetes and Wound Care <span>â€º</span></a>
+                <a href="#resources">Heart Disease &amp; Wound Care <span>â€º</span></a>
+                <a href="#resources">Vascular Disease &amp; Wound Care <span>â€º</span></a>
+                <a href="#resources">Pressure Ulcers and Wound Care <span>â€º</span></a>
+                <a href="#resources">Cancer and Wound Care <span>â€º</span></a>
+                <a href="#resources">Caring for Your Wound <span>â€º</span></a>
+                <a href="#resources">Surgical Incisions, Infections <span>â€º</span></a>
+                <a href="#resources">Chronic Wounds <span>â€º</span></a>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#resources">Resources <span class="chev">▼</span></a>
+              <a class="nav-link" href="#resources">Resources <span class="chev">â–¼</span></a>
               <div class="dropdown">
-                <a href="#why-royal">Board-Certified Wound Care <span>›</span></a>
-                <a href="#resources">Blog <span>›</span></a>
-                <a href="#contact">Contact Us <span>›</span></a>
-                <a href="#resources">Frequently Asked Questions <span>›</span></a>
+                <a href="#why-royal">Board-Certified Wound Care <span>â€º</span></a>
+                <a href="#resources">Blog <span>â€º</span></a>
+                <a href="#contact">Contact Us <span>â€º</span></a>
+                <a href="#resources">Frequently Asked Questions <span>â€º</span></a>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#wound-care-course">Education <span class="chev">▼</span></a>
+              <a class="nav-link" href="#wound-care-course">Education <span class="chev">â–¼</span></a>
               <div class="dropdown">
-                <a href="#wound-care-course">Wound Care Nurse Certification <span>›</span></a>
-                <a href="#wound-care-course">Nursing Education Credits <span>›</span></a>
-                <a href="#wound-care-course">Medical Education Credits <span>›</span></a>
+                <a href="#wound-care-course">Wound Care Nurse Certification <span>â€º</span></a>
+                <a href="#wound-care-course">Nursing Education Credits <span>â€º</span></a>
+                <a href="#wound-care-course">Medical Education Credits <span>â€º</span></a>
                 <a href="#wound-care-course" style="opacity:.5; pointer-events:none; cursor:default;">Wound Care Course <span style="font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;">(Coming soon)</span></a>
               </div>
             </li>
@@ -1855,7 +2061,7 @@
             </h1>
 
             <p class="hero-premium__copy">
-              Advanced wound care support for patients, families, skilled nursing facilities, and healthcare teams — including mobile wound care, in-clinic wound care, and facility support.
+              Advanced wound care support for patients, families, skilled nursing facilities, and healthcare teams â€” including mobile wound care, in-clinic wound care, and facility support.
             </p>
 
             <div class="hero-premium__button-grid" aria-label="Main care pathways">
@@ -1871,7 +2077,7 @@
                 </span>
                 <h3>For Nursing Facilities</h3>
                 <p>Explore skilled nursing facility wound care support, bedside services, staff education, and partnership pathways for care teams.</p>
-                <span class="hero-choice-card__arrow">›</span>
+                <span class="hero-choice-card__arrow">â€º</span>
               </a>
 
               <a class="hero-choice-card" href="#patients">
@@ -1885,7 +2091,7 @@
                 </span>
                 <h3>For Patients & Families</h3>
                 <p>Find patient wound care support, appointment pathways, care setting information, and resources for families.</p>
-                <span class="hero-choice-card__arrow">›</span>
+                <span class="hero-choice-card__arrow">â€º</span>
               </a>
             </div>
           </div>
@@ -1959,31 +2165,31 @@
 
           <div class="audience-grid">
             <article class="audience-card">
-              <div class="mini-icon">♡</div>
+              <div class="mini-icon">â™¡</div>
               <h3>Patients</h3>
               <p>Explore appointment options, mobile wound care, in-clinic wound care, patient wound care support, and what to expect.</p>
-              <a class="text-link" href="#appointment">Request appointment →</a>
+              <a class="text-link" href="#appointment">Request appointment â†’</a>
             </article>
 
             <article class="audience-card" id="families">
-              <div class="mini-icon">☘</div>
+              <div class="mini-icon">â˜˜</div>
               <h3>Families</h3>
               <p>Access practical wound care guidance for families supporting a loved one and preparing for the next care step.</p>
-              <a class="text-link" href="#resources">View family resources →</a>
+              <a class="text-link" href="#resources">View family resources â†’</a>
             </article>
 
             <article class="audience-card" id="facilities">
-              <div class="mini-icon">▦</div>
+              <div class="mini-icon">â–¦</div>
               <h3>Facilities</h3>
               <p>Learn how Royal Wound Care can support skilled nursing facilities, bedside wound care coordination, and facility care teams.</p>
-              <a class="text-link" href="#why-royal">Become a partner →</a>
+              <a class="text-link" href="#why-royal">Become a partner â†’</a>
             </article>
 
             <article class="audience-card" id="education">
-              <div class="mini-icon">▱</div>
+              <div class="mini-icon">â–±</div>
               <h3>Education</h3>
               <p>Explore wound care nurse certification, education credits, license renewal information, and wound care course pathways.</p>
-              <a class="text-link" href="#wound-care-course">Explore education →</a>
+              <a class="text-link" href="#wound-care-course">Explore education â†’</a>
             </article>
           </div>
         </div>
@@ -1994,7 +2200,7 @@
           <div class="section-heading">
             <div class="label">Why Royal Wound Care</div>
             <h2>Advanced wound care built around coordination, clarity, and clinical support.</h2>
-            <p>Royal Wound Care supports patients, families, skilled nursing facilities, and healthcare teams with advanced wound care services across mobile, in-clinic, home health, and facility-based settings — keeping communication clear and care pathways organized for every audience.</p>
+            <p>Royal Wound Care supports patients, families, skilled nursing facilities, and healthcare teams with advanced wound care services across mobile, in-clinic, home health, and facility-based settings â€” keeping communication clear and care pathways organized for every audience.</p>
           </div>
 
           <div class="about-grid">
@@ -2025,35 +2231,65 @@
         </div>
       </section>
 
-      <section class="section services-section" id="services">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div class="label">Specialized Services</div>
-            <h2>Advanced wound care services organized for fast understanding.</h2>
-            <p>Explore common wound care service pathways, including bedside wound care, mobile wound care, in-clinic wound care, skilled nursing facility support, and clinical education.</p>
-          </div>
+      <section class="services-section services-carousel" id="services">
 
-          <div class="service-grid">
-            <article class="service-card">
-              <div class="mini-icon">✚</div>
-              <h3>Bedside Wound Care</h3>
-              <p>Support for patients who need wound care in skilled nursing facility, home health, or other care settings.</p>
-            </article>
-            <article class="service-card">
-              <div class="mini-icon">⌂</div>
-              <h3>Mobile Wound Care</h3>
-              <p>Clear access point for visitors looking for mobile wound care information outside a traditional clinic visit.</p>
-            </article>
-            <article class="service-card">
-              <div class="mini-icon">▦</div>
-              <h3>Facility Support</h3>
-              <p>Facility wound care support for skilled nursing facilities, administrators, directors of nursing, and care teams.</p>
-            </article>
-            <article class="service-card">
-              <div class="mini-icon">▱</div>
-              <h3>Clinical Education</h3>
-              <p>Wound care education and course pathways for professionals supporting wound care patients.</p>
-            </article>
+        <!-- Intro two-column -->
+        <div class="carousel-intro">
+          <div class="carousel-intro-left">
+            <div class="c-eyebrow">Specialized Services</div>
+            <h2>Advanced wound care services organized for fast understanding.</h2>
+          </div>
+          <div class="carousel-intro-right">
+            <p>Explore common wound care service pathways, including bedside wound care, mobile wound care, in-clinic wound care, skilled nursing facility support, and clinical education.</p>
+            <div class="c-stat-row">
+              <div class="c-stat"><strong>18+</strong><span>Service areas</span></div>
+              <div class="c-stat"><strong>2</strong><span>LA locations</span></div>
+              <div class="c-stat"><strong>100%</strong><span>Bedside focus</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel-outer">
+          <div class="carousel-track">
+            <!-- Set 1 -->
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">01</span><h3>Wound Care Services</h3><p>Professional wound care services designed to support facility care teams.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">02</span><h3>Skilled Observation &amp; Assessment</h3><p>Structured review and follow-up support for residents with wound care needs.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">03</span><h3>Diabetic Management Support</h3><p>Wound care support for residents with diabetes-related care considerations.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">04</span><h3>Medication Supervision</h3><p>Coordination-oriented support aligned with the resident's care plan.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">05</span><h3>Intravenous Therapy</h3><p>IV therapy support where appropriate and confirmed by the clinical team.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">06</span><h3>TPN Support</h3><p>Support for residents with nutrition-related clinical coordination needs.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">07</span><h3>Pain Management Coordination</h3><p>Supportive coordination language only; final wording should be physician-approved.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">08</span><h3>Respiratory Treatment Support</h3><p>Facility care support when respiratory-related needs intersect with resident care.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">09</span><h3>Incontinence Care Support</h3><p>Support for residents whose wound care needs require broader care coordination.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">10</span><h3>Catheter &amp; Ostomy Care</h3><p>Care coordination support for catheter and ostomy-related needs.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">11</span><h3>Gastrostomy Tube Support</h3><p>Gastric tube support aligned with the resident's clinical care plan.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">12</span><h3>PEG Tube Support</h3><p>Supportive service listing for PEG tube-related care needs.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">13</span><h3>Suprapubic Catheters</h3><p>Supportive service listing for suprapubic catheter-related care needs.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">14</span><h3>PICC Line Insertion</h3><p>Procedural service listing. Final scope and wording should be confirmed.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">15</span><h3>PICC Line Removal</h3><p>Procedural service listing. Final scope and wording should be confirmed.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">16</span><h3>Skin Rashes</h3><p>Evaluation and care coordination support for skin rashes and skin integrity concerns.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">17</span><h3>Skin Survey</h3><p>Supportive skin checks to help facility teams identify and monitor skin integrity concerns.</p></div></article>
+            <article class="carousel-card"><div class="carousel-card-inner"><span class="c-num">18</span><h3>Post-Surgical Wound Support</h3><p>Care coordination support for residents with post-surgical wound care needs.</p></div></article>
+            <!-- Set 2 â€“ duplicate for seamless loop -->
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">01</span><h3>Wound Care Services</h3><p>Professional wound care services designed to support facility care teams.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">02</span><h3>Skilled Observation &amp; Assessment</h3><p>Structured review and follow-up support for residents with wound care needs.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">03</span><h3>Diabetic Management Support</h3><p>Wound care support for residents with diabetes-related care considerations.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">04</span><h3>Medication Supervision</h3><p>Coordination-oriented support aligned with the resident's care plan.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">05</span><h3>Intravenous Therapy</h3><p>IV therapy support where appropriate and confirmed by the clinical team.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">06</span><h3>TPN Support</h3><p>Support for residents with nutrition-related clinical coordination needs.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">07</span><h3>Pain Management Coordination</h3><p>Supportive coordination language only; final wording should be physician-approved.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">08</span><h3>Respiratory Treatment Support</h3><p>Facility care support when respiratory-related needs intersect with resident care.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">09</span><h3>Incontinence Care Support</h3><p>Support for residents whose wound care needs require broader care coordination.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">10</span><h3>Catheter &amp; Ostomy Care</h3><p>Care coordination support for catheter and ostomy-related needs.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">11</span><h3>Gastrostomy Tube Support</h3><p>Gastric tube support aligned with the resident's clinical care plan.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">12</span><h3>PEG Tube Support</h3><p>Supportive service listing for PEG tube-related care needs.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">13</span><h3>Suprapubic Catheters</h3><p>Supportive service listing for suprapubic catheter-related care needs.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">14</span><h3>PICC Line Insertion</h3><p>Procedural service listing. Final scope and wording should be confirmed.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">15</span><h3>PICC Line Removal</h3><p>Procedural service listing. Final scope and wording should be confirmed.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">16</span><h3>Skin Rashes</h3><p>Evaluation and care coordination support for skin rashes and skin integrity concerns.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">17</span><h3>Skin Survey</h3><p>Supportive skin checks to help facility teams identify and monitor skin integrity concerns.</p></div></article>
+            <article class="carousel-card" aria-hidden="true"><div class="carousel-card-inner"><span class="c-num">18</span><h3>Post-Surgical Wound Support</h3><p>Care coordination support for residents with post-surgical wound care needs.</p></div></article>
           </div>
         </div>
       </section>
@@ -2103,7 +2339,7 @@
               <h2>Expert wound care insights from our clinical team.</h2>
               <p>Stay informed with the latest wound care education, treatment guides, and clinical resources.</p>
             </div>
-            <a class="blog-view-all" href="https://royalwoundcare.com/blog" target="_blank" rel="noopener">View all posts →</a>
+            <a class="blog-view-all" href="https://royalwoundcare.com/blog" target="_blank" rel="noopener">View all posts â†’</a>
           </div>
 
           <div class="resources-grid">
@@ -2114,9 +2350,9 @@
               <div class="blog-card__meta">
                 <div class="blog-card__meta-left">
                   <span>May 7, 2026</span>
-                  <span>· 11 min read</span>
+                  <span>Â· 11 min read</span>
                 </div>
-                <a class="text-link" href="https://royalwoundcare.com/post/diabetic-foot-ulcer-treatment" target="_blank" rel="noopener">Read →</a>
+                <a class="text-link" href="https://royalwoundcare.com/post/diabetic-foot-ulcer-treatment" target="_blank" rel="noopener">Read â†’</a>
               </div>
             </article>
 
@@ -2127,9 +2363,9 @@
               <div class="blog-card__meta">
                 <div class="blog-card__meta-left">
                   <span>Apr 30, 2026</span>
-                  <span>· 9 min read</span>
+                  <span>Â· 9 min read</span>
                 </div>
-                <a class="text-link" href="https://royalwoundcare.com/post/what-does-a-healing-wound-smell-like" target="_blank" rel="noopener">Read →</a>
+                <a class="text-link" href="https://royalwoundcare.com/post/what-does-a-healing-wound-smell-like" target="_blank" rel="noopener">Read â†’</a>
               </div>
             </article>
 
@@ -2140,9 +2376,9 @@
               <div class="blog-card__meta">
                 <div class="blog-card__meta-left">
                   <span>Apr 23, 2026</span>
-                  <span>· 11 min read</span>
+                  <span>Â· 11 min read</span>
                 </div>
-                <a class="text-link" href="https://royalwoundcare.com/post/dissolvable-stitches-healing-stages" target="_blank" rel="noopener">Read →</a>
+                <a class="text-link" href="https://royalwoundcare.com/post/dissolvable-stitches-healing-stages" target="_blank" rel="noopener">Read â†’</a>
               </div>
             </article>
 
@@ -2153,9 +2389,9 @@
               <div class="blog-card__meta">
                 <div class="blog-card__meta-left">
                   <span>Apr 16, 2026</span>
-                  <span>· 9 min read</span>
+                  <span>Â· 9 min read</span>
                 </div>
-                <a class="text-link" href="https://royalwoundcare.com/post/how-to-wrap-a-wound" target="_blank" rel="noopener">Read →</a>
+                <a class="text-link" href="https://royalwoundcare.com/post/how-to-wrap-a-wound" target="_blank" rel="noopener">Read â†’</a>
               </div>
             </article>
 
@@ -2166,9 +2402,9 @@
               <div class="blog-card__meta">
                 <div class="blog-card__meta-left">
                   <span>Apr 9, 2026</span>
-                  <span>· 9 min read</span>
+                  <span>Â· 9 min read</span>
                 </div>
-                <a class="text-link" href="https://royalwoundcare.com/post/wound-nurse-certification-programs" target="_blank" rel="noopener">Read →</a>
+                <a class="text-link" href="https://royalwoundcare.com/post/wound-nurse-certification-programs" target="_blank" rel="noopener">Read â†’</a>
               </div>
             </article>
 
@@ -2179,9 +2415,9 @@
               <div class="blog-card__meta">
                 <div class="blog-card__meta-left">
                   <span>Mar 26, 2026</span>
-                  <span>· 9 min read</span>
+                  <span>Â· 9 min read</span>
                 </div>
-                <a class="text-link" href="https://royalwoundcare.com/post/wound-care-certification-for-lpn" target="_blank" rel="noopener">Read →</a>
+                <a class="text-link" href="https://royalwoundcare.com/post/wound-care-certification-for-lpn" target="_blank" rel="noopener">Read â†’</a>
               </div>
             </article>
           </div>
@@ -2207,7 +2443,7 @@
             <span class="interest-modal__eyebrow">Wound VAC Support</span>
             <h3 id="interestModalTitle">Join the Wound VAC Interest List</h3>
           </div>
-          <button class="modal-close" type="button" data-close-interest aria-label="Close modal">×</button>
+          <button class="modal-close" type="button" data-close-interest aria-label="Close modal">Ã—</button>
         </div>
         <div class="interest-modal__body">
           <div class="modal-instructions">
@@ -2319,7 +2555,7 @@
         </div>
       </div>
       <div class="footer-tagline">
-        Royal Wound Care · Specialized wound care, facility support, education, and resources
+        Royal Wound Care Â· Specialized wound care, facility support, education, and resources
       </div>
     </footer>
   </div>
