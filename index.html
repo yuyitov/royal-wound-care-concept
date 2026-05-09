@@ -349,7 +349,7 @@
       position: absolute;
       width: 64%; height: 90%;
       top: -5%; left: -8%;
-      background: radial-gradient(circle, rgba(44, 166, 164, .22) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(44, 166, 164, .34) 0%, transparent 65%);
       border-radius: 50%;
     }
 
@@ -360,6 +360,17 @@
       top: -8%; right: -6%;
       background: radial-gradient(circle, rgba(242, 197, 124, .10) 0%, transparent 60%);
       border-radius: 50%;
+    }
+
+    /* Extra teal glow — bottom-right corner of hero */
+    .hero-parallax-bg::after {
+      content: "";
+      position: absolute;
+      width: 42%; height: 60%;
+      bottom: -10%; right: 8%;
+      background: radial-gradient(circle, rgba(44,166,164,.16) 0%, transparent 68%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     .hero-premium__inner {
@@ -671,10 +682,11 @@
     }
 
     .about-point {
-      padding: 22px;
+      padding: 22px 22px 22px 24px;
       border-radius: 22px;
       background: var(--soft-bg);
       border: 1px solid var(--line);
+      border-left: 3px solid var(--teal);
     }
 
     .about-point strong {
@@ -1087,8 +1099,9 @@
     }
 
     .partner-logo-card:hover {
-      box-shadow: 0 20px 56px rgba(31,59,104,.13);
+      box-shadow: 0 20px 56px rgba(44,166,164,.14);
       transform: translateY(-2px);
+      border-color: rgba(44,166,164,.35);
     }
 
     .partner-logo-card img {
@@ -1691,7 +1704,8 @@
       padding: 52px 34px;
       background: #fff;
       border: 1px solid var(--line);
-      box-shadow: var(--shadow);
+      border-top: 3px solid var(--teal);
+      box-shadow: var(--shadow), 0 -2px 40px rgba(44,166,164,.08);
     }
 
     .final-cta h2 {
