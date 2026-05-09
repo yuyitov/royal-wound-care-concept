@@ -6,21 +6,32 @@
   <title>Royal Wound Care | Skilled Nursing Facilities Concept</title>
   <meta name="description" content="Concept page for Royal Wound Care skilled nursing facility partnerships. For review only." />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@600;700&display=swap');
-
     :root {
-      --teal: #2CA6A4;
-      --gold: #F2C57C;
-      --navy: #1F3B68;
-      --navy-dark: #132845;
+      --navy: #0B1F3A;
+      --navy-mid: #14305A;
+      --navy-light: #1E4080;
+      --navy-dark: #0B1F3A;
+      --royal-blue: #0B6FAE;
+      --medical-blue: #1769C2;
+      --teal: #3BA9A6;
+      --teal-deep: #278F8C;
+      --teal-dark: #278F8C;
+      --teal-light: #6CC4C1;
+      --gold: #C9A84C;
+      --gold-light: #E2C97E;
+      --gold-dark: #A07830;
       --white: #FFFFFF;
-      --soft-bg: #F6FAFB;
-      --soft-blue: #EAF4F7;
-      --soft-gold: #FFF7E8;
-      --text: #14213D;
-      --muted: #65758B;
-      --line: #D9E4EA;
-      --shadow: 0 18px 50px rgba(31, 59, 104, 0.12);
+      --soft-bg: #F4F8F8;
+      --soft-blue: #F4F8F8;
+      --soft-gold: #FFF9EE;
+      --ink: #13213B;
+      --text: #13213B;
+      --muted: #6B7B8D;
+      --line: #E4EDED;
+      --shadow: 0 22px 70px rgba(11, 31, 58, 0.14);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
       --radius: 18px;
       --radius-sm: 12px;
       --max: 1180px;
@@ -37,7 +48,7 @@
 
     body {
       margin: 0;
-      font-family: "Lato", Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background: var(--white);
       line-height: 1.5;
@@ -488,7 +499,7 @@
     h1,
     h2,
     h3 {
-      font-family: "Playfair Display", Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       color: var(--navy);
       line-height: 1.05;
       margin: 0;
@@ -575,7 +586,7 @@
 
     .hero-card-title {
       position: relative;
-      font-family: "Playfair Display", Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 34px;
       line-height: 1.08;
       max-width: 340px;
@@ -714,7 +725,7 @@
     }
 
     .service-card h3 {
-      font-family: "Lato", Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 18px;
       line-height: 1.2;
       margin-bottom: 6px;
@@ -762,7 +773,7 @@
     }
 
     .process-card h3 {
-      font-family: "Lato", Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 18px;
       line-height: 1.25;
       margin-bottom: 8px;
@@ -854,7 +865,7 @@
     }
 
     .outcome-mini-card h3 {
-      font-family: "Lato", Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 17px;
       line-height: 1.25;
       color: #1f3b68;
@@ -923,7 +934,7 @@
 
     .chart-header h3 {
       margin: 0 0 4px;
-      font-family: "Lato", Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 16px;
       color: #1f3b68;
     }
@@ -1221,7 +1232,7 @@
 
     .reel-content h3 {
       color: #fff;
-      font-family: "Lato", Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 25px;
       line-height: 1.1;
       margin-bottom: 10px;
@@ -1350,7 +1361,7 @@
     }
 
     .location-card h3 {
-      font-family: "Lato", Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 21px;
       margin-bottom: 8px;
     }
@@ -1378,7 +1389,7 @@
 
     .footer strong {
       color: #fff;
-      font-family: "Playfair Display", Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 24px;
     }
 
@@ -1511,166 +1522,166 @@
         padding: 22px;
       }
     }
+
+    /* ── Royal Wound Care shared header ── */
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(220,232,242,.95);
+      box-shadow: 0 10px 30px rgba(11,31,58,.06);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+    }
+    .topbar .site-header { display: contents; }
+    .topbar .logo {
+      grid-column: 1; grid-row: 1 / 3;
+      display: flex; align-items: center; flex: 0 0 auto;
+      padding: 10px 28px 10px 32px;
+    }
+    .topbar .logo img { display: block; width: 214px; height: auto; object-fit: contain; }
+    .topbar .header-actions {
+      grid-column: 2; grid-row: 1;
+      display: flex; align-items: center; justify-content: flex-end;
+      gap: 14px; flex: 0 0 auto; padding: 8px 32px 4px 0;
+    }
+    .header-action-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 118px; height: 42px; padding: 0 22px;
+      border-radius: 8px; color: #fff; background: #3BA9A6;
+      border: 1.5px solid #E2C97E; font-size: 14px; font-weight: 900;
+      line-height: 1; box-shadow: 0 10px 24px rgba(59,169,166,.28);
+      white-space: nowrap; text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .header-action-btn:hover { transform: translateY(-1px); background: #278F8C; }
+    .header-action-btn--blog {
+      background: #0B1F3A; color: #fff;
+      box-shadow: 0 10px 24px rgba(11,31,58,.16); border-color: rgba(255,255,255,.15);
+    }
+    .header-action-btn--blog:hover { background: #14305A; }
+    .published-nav-row {
+      grid-column: 2; grid-row: 2;
+      padding: 0 32px 8px 0;
+      display: flex; justify-content: flex-end;
+    }
+    .published-nav { display: flex; align-items: center; justify-content: flex-end; }
+    .nav-list {
+      list-style: none; display: flex; align-items: center;
+      justify-content: flex-end; gap: 34px; margin: 0; padding: 0;
+    }
+    .topbar .nav-item { position: relative; padding: 0; flex: 0 0 auto; }
+    .topbar .nav-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 2px; color: #1a3558;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px; font-weight: 700; line-height: 1;
+      border-radius: 999px; white-space: nowrap;
+      transition: opacity .2s ease, color .2s ease; background: transparent;
+    }
+    .topbar .nav-link:hover,
+    .topbar .nav-item:hover .nav-link { color: #0B6FAE; opacity: .92; }
+    .nav-link .chev { font-size: 10px; line-height: 1; transform: translateY(-1px); }
+    .topbar .dropdown {
+      position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      min-width: 280px; background: #fff;
+      border: 1px solid #dce3eb; border-radius: 16px;
+      box-shadow: 0 18px 48px rgba(11,31,58,.16);
+      padding: 16px 10px 10px; opacity: 0; pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease; z-index: 30;
+    }
+    .topbar .dropdown--wide { min-width: 330px; }
+    .topbar .nav-item:hover .dropdown,
+    .topbar .nav-item:focus-within .dropdown {
+      opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+    }
+    .topbar .dropdown a {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; padding: 11px 12px; border-radius: 8px;
+      color: #1a3558; font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px; font-weight: 700;
+      transition: background .2s ease, color .2s ease;
+    }
+    .topbar .dropdown a:hover { background: #f4f7fb; color: #0B1F3A; }
+    .topbar .mobile-toggle { display: none; }
   </style>
 </head>
 <body>
   <div class="concept-ribbon">Concept page for review only — not connected to the live GoHighLevel website.</div>
 
-  <header class="site-header">
-    <div class="header-top">
-      <a class="brand" href="#top" aria-label="Royal Wound Care concept home">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/FtBJCK1GLpMIqS57PbDJ/media/67e3d2bf2be3f75e0f215e50.png" alt="Royal Wound Care logo" />
+  <header class="topbar">
+    <div class="site-header">
+      <a href="index.html" class="logo" aria-label="Royal Wound Care Home">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A//assets.cdn.filesafe.space/FtBJCK1GLpMIqS57PbDJ/media/67e3d2bf2be3f75e0f215e50.png" alt="Royal Wound Care" />
       </a>
-
-      <div class="header-actions">
-        <button class="btn btn-appointment" type="button" data-toast="Request Appointment flow simulated — patient/referral link will be added later.">Request Appointment</button>
-        <button class="btn btn-partner" type="button" data-scroll="#facility-contact">Partner With Us</button>
-      </div>
-
-      <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open mobile menu">☰</button>
-    </div>
-
-    <div class="header-menu-row">
-      <div class="header-menu-inner">
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a class="nav-link" href="#top">Home</a>
-
-          <div class="nav-item">
-            <button class="nav-trigger" type="button">Patients ▾</button>
-            <div class="nav-dropdown" role="menu" aria-label="Patients submenu">
-              <button type="button" data-toast="Request Appointment flow simulated — patient link will be added later.">Request Appointment</button>
-              <button type="button" data-toast="Mobile Wound Care page simulated — link will be added later.">Mobile Wound Care</button>
-              <button type="button" data-toast="In-Clinic Care page simulated — link will be added later.">In-Clinic Care</button>
-              <button type="button" data-toast="Home Health Care page simulated — link will be added later.">Home Health Care</button>
-              <button type="button" data-toast="What to Expect page simulated — link will be added later.">What to Expect</button>
-              <button type="button" data-toast="For Families page simulated — link will be added later.">For Families</button>
-              <button type="button" data-toast="Patient FAQs page simulated — link will be added later.">Patient FAQs</button>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <button class="nav-trigger" type="button">Facilities ▾</button>
-            <div class="nav-dropdown" role="menu" aria-label="Facilities submenu">
-              <button type="button" data-scroll="#overview">Skilled Nursing Facilities</button>
-              <button type="button" data-scroll="#facility-contact">Become a Partner</button>
-              <button type="button" data-scroll="#outcomes">Facility Benefits</button>
-              <button type="button" data-scroll="#services">Bedside Wound Care</button>
-              <button type="button" data-toast="Staff Training page simulated — link will be added later.">Staff Training</button>
-              <button type="button" data-toast="Compliance Support page simulated — link will be added later.">Compliance Support</button>
-              <button type="button" data-toast="Facility FAQs page simulated — link will be added later.">Facility FAQs</button>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <button class="nav-trigger" type="button">Education ▾</button>
-            <div class="nav-dropdown" role="menu" aria-label="Education submenu">
-              <button type="button" data-toast="Wound Care Nurse Certification page simulated — link will be added later.">Wound Care Nurse Certification</button>
-              <button type="button" data-toast="Nursing Education Credits page simulated — link will be added later.">Nursing Education Credits</button>
-              <button type="button" data-toast="Medical Education Credits page simulated — link will be added later.">Medical Education Credits</button>
-              <button type="button" data-toast="Wound Care Course page simulated — link will be added later.">Wound Care Course</button>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <button class="nav-trigger" type="button">Resources ▾</button>
-            <div class="nav-dropdown" role="menu" aria-label="Resources submenu">
-              <button type="button" data-scroll="#resources">Blog</button>
-              <button type="button" data-toast="Wound Care Guides page simulated — link will be added later.">Wound Care Guides</button>
-              <button type="button" data-toast="Caring for Your Wound page simulated — link will be added later.">Caring for Your Wound</button>
-              <button type="button" data-toast="FAQs page simulated — link will be added later.">FAQs</button>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <button class="nav-trigger" type="button">About ▾</button>
-            <div class="nav-dropdown" role="menu" aria-label="About submenu">
-              <button type="button" data-toast="About Us page simulated — link will be added later.">About Us</button>
-              <button type="button" data-toast="Our Providers page simulated — link will be added later.">Our Providers</button>
-              <button type="button" data-scroll="#locations">Locations</button>
-              <button type="button" data-toast="Partners page simulated — link will be added later.">Partners</button>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <button class="nav-trigger" type="button">Contact ▾</button>
-            <div class="nav-dropdown" role="menu" aria-label="Contact submenu">
-              <button type="button" data-scroll="#facility-contact">Contact Us</button>
-            </div>
-          </div>
-        </nav>
+      <div class="header-actions" aria-label="Quick actions">
+        <a class="header-action-btn" href="index.html#appointment">Book Now</a>
+        <a class="header-action-btn header-action-btn--blog" href="index.html#resources">Blog</a>
       </div>
     </div>
 
-    <div class="mobile-panel" id="mobilePanel">
-      <div class="mobile-actions-top">
-        <button class="mobile-cta partner" type="button" data-scroll="#facility-contact">Partner With Us</button>
-        <button class="mobile-cta appointment" type="button" data-toast="Request Appointment flow simulated — patient/referral link will be added later.">Request Appointment</button>
-      </div>
-
-      <a href="#top">Home</a>
-
-      <details>
-        <summary>Patients</summary>
-        <div class="mobile-submenu">
-          <button class="mobile-subitem" type="button" data-toast="Request Appointment flow simulated — patient link will be added later.">Request Appointment</button>
-          <button class="mobile-subitem" type="button" data-toast="Mobile Wound Care page simulated — link will be added later.">Mobile Wound Care</button>
-          <button class="mobile-subitem" type="button" data-toast="In-Clinic Care page simulated — link will be added later.">In-Clinic Care</button>
-          <button class="mobile-subitem" type="button" data-toast="Home Health Care page simulated — link will be added later.">Home Health Care</button>
-          <button class="mobile-subitem" type="button" data-toast="What to Expect page simulated — link will be added later.">What to Expect</button>
-          <button class="mobile-subitem" type="button" data-toast="For Families page simulated — link will be added later.">For Families</button>
-          <button class="mobile-subitem" type="button" data-toast="Patient FAQs page simulated — link will be added later.">Patient FAQs</button>
-        </div>
-      </details>
-
-      <details>
-        <summary>Facilities</summary>
-        <div class="mobile-submenu">
-          <button class="mobile-subitem" type="button" data-scroll="#overview">Skilled Nursing Facilities</button>
-          <button class="mobile-subitem" type="button" data-scroll="#facility-contact">Become a Partner</button>
-          <button class="mobile-subitem" type="button" data-scroll="#outcomes">Facility Benefits</button>
-          <button class="mobile-subitem" type="button" data-scroll="#services">Bedside Wound Care</button>
-          <button class="mobile-subitem" type="button" data-toast="Staff Training page simulated — link will be added later.">Staff Training</button>
-          <button class="mobile-subitem" type="button" data-toast="Compliance Support page simulated — link will be added later.">Compliance Support</button>
-          <button class="mobile-subitem" type="button" data-toast="Facility FAQs page simulated — link will be added later.">Facility FAQs</button>
-        </div>
-      </details>
-
-      <details>
-        <summary>Education</summary>
-        <div class="mobile-submenu">
-          <button class="mobile-subitem" type="button" data-toast="Wound Care Nurse Certification page simulated — link will be added later.">Wound Care Nurse Certification</button>
-          <button class="mobile-subitem" type="button" data-toast="Nursing Education Credits page simulated — link will be added later.">Nursing Education Credits</button>
-          <button class="mobile-subitem" type="button" data-toast="Medical Education Credits page simulated — link will be added later.">Medical Education Credits</button>
-          <button class="mobile-subitem" type="button" data-toast="Wound Care Course page simulated — link will be added later.">Wound Care Course</button>
-        </div>
-      </details>
-
-      <details>
-        <summary>Resources</summary>
-        <div class="mobile-submenu">
-          <button class="mobile-subitem" type="button" data-scroll="#resources">Blog</button>
-          <button class="mobile-subitem" type="button" data-toast="Wound Care Guides page simulated — link will be added later.">Wound Care Guides</button>
-          <button class="mobile-subitem" type="button" data-toast="Caring for Your Wound page simulated — link will be added later.">Caring for Your Wound</button>
-          <button class="mobile-subitem" type="button" data-toast="FAQs page simulated — link will be added later.">FAQs</button>
-        </div>
-      </details>
-
-      <details>
-        <summary>About</summary>
-        <div class="mobile-submenu">
-          <button class="mobile-subitem" type="button" data-toast="About Us page simulated — link will be added later.">About Us</button>
-          <button class="mobile-subitem" type="button" data-toast="Our Providers page simulated — link will be added later.">Our Providers</button>
-          <button class="mobile-subitem" type="button" data-scroll="#locations">Locations</button>
-          <button class="mobile-subitem" type="button" data-toast="Partners page simulated — link will be added later.">Partners</button>
-        </div>
-      </details>
-
-      <details>
-        <summary>Contact</summary>
-        <div class="mobile-submenu">
-          <button class="mobile-subitem" type="button" data-scroll="#facility-contact">Contact Us</button>
-        </div>
-      </details>
+    <div class="published-nav-row">
+      <nav class="published-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#why-royal">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Our Services <span class="chev">▼</span></a>
+            <div class="dropdown">
+              <a href="skilled-nursing-facilities.html">Skilled Nursing Facilities <span>›</span></a>
+              <a href="index.html#services">Mobile Wound Care <span>›</span></a>
+              <a href="index.html#services">In-Clinic Wound Care <span>›</span></a>
+              <a href="index.html#services">Home Health Care <span>›</span></a>
+              <a href="index.html#why-royal">SNF Partners <span>›</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#why-royal">Become a Partner <span class="chev">▼</span></a>
+            <div class="dropdown">
+              <a href="index.html#why-royal">What Our Partners Experience <span>›</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#why-royal">Wound Care <span class="chev">▼</span></a>
+            <div class="dropdown dropdown--wide">
+              <a href="index.html#why-royal">Why wound care <span>›</span></a>
+              <a href="index.html#services">Advanced Wound Treatments <span>›</span></a>
+              <a href="index.html#resources">Diabetes and Wound Care <span>›</span></a>
+              <a href="index.html#resources">Heart Disease &amp; Wound Care <span>›</span></a>
+              <a href="index.html#resources">Vascular Disease &amp; Wound Care <span>›</span></a>
+              <a href="index.html#resources">Pressure Ulcers and Wound Care <span>›</span></a>
+              <a href="index.html#resources">Cancer and Wound Care <span>›</span></a>
+              <a href="index.html#resources">Caring for Your Wound <span>›</span></a>
+              <a href="index.html#resources">Surgical Incisions, Infections <span>›</span></a>
+              <a href="index.html#resources">Chronic Wounds <span>›</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#resources">Resources <span class="chev">▼</span></a>
+            <div class="dropdown">
+              <a href="index.html#why-royal">Board-Certified Wound Care <span>›</span></a>
+              <a href="index.html#resources">Blog <span>›</span></a>
+              <a href="index.html#contact">Contact Us <span>›</span></a>
+              <a href="index.html#resources">Frequently Asked Questions <span>›</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#wound-care-course">Education <span class="chev">▼</span></a>
+            <div class="dropdown">
+              <a href="index.html#wound-care-course">Wound Care Nurse Certification <span>›</span></a>
+              <a href="index.html#wound-care-course">Nursing Education Credits <span>›</span></a>
+              <a href="index.html#wound-care-course">Medical Education Credits <span>›</span></a>
+              <a href="index.html#wound-care-course" style="opacity:.5; pointer-events:none; cursor:default;">Wound Care Course <span style="font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;">(Coming soon)</span></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#partners">Testimonials</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 
