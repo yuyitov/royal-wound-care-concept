@@ -1407,13 +1407,69 @@
     }
 
     footer {
-      padding: 36px 32px;
+      padding: 48px 32px 32px;
       border-top: 1px solid var(--line);
       color: var(--muted);
-      text-align: center;
       font-size: 14px;
       background: #fff;
     }
+
+    .footer-service-areas {
+      max-width: 1240px;
+      margin: 0 auto 32px;
+    }
+
+    .footer-service-areas > strong {
+      display: block;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .footer-locations {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .footer-location {
+      background: var(--soft-bg);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px 24px;
+      text-align: left;
+    }
+
+    .footer-location strong {
+      display: block;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .footer-location p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .footer-location a {
+      color: var(--teal);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .footer-location a:hover { text-decoration: underline; }
 
     @media (max-width: 1180px) {
       .site-header {
@@ -1596,6 +1652,9 @@
       .footer-inner {
         grid-template-columns: 1fr;
         gap: 24px;
+      }
+      .footer-locations {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -2063,17 +2122,25 @@
     </div>
 
     <footer id="contact">
-      <div class="footer-inner">
-        <div class="footer-col">
-          <strong>Service Areas</strong>
-          <ul>
-            <li>West Hills</li>
-            <li>Beverly Hills</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <strong>Contact</strong>
-          <p>Contact Royal Wound Care for current appointment and location information.</p>
+      <div class="footer-service-areas">
+        <strong>Service Areas</strong>
+        <div class="footer-locations">
+          <div class="footer-location">
+            <strong>West Hills</strong>
+            <p>
+              7230 Medical Center Dr. Suite 100<br>
+              West Hills, CA 91307<br>
+              <a href="tel:+18186602977">(818) 660-2977</a>
+            </p>
+          </div>
+          <div class="footer-location">
+            <strong>Beverly Hills</strong>
+            <p>
+              9735 Wilshire Blvd #210B<br>
+              Beverly Hills, CA 90212<br>
+              <a href="tel:+18186602977">(818) 660-2977</a>
+            </p>
+          </div>
         </div>
       </div>
       <div class="footer-tagline">
